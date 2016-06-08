@@ -82,9 +82,15 @@
         {% endif %}
         {% if homeDetails is not empty %}
           {% if homeDetails.sub_logo is not empty %}
-            <div class="psp-logo">
-              <a href="http://www.provincia.trento.it"><img src="{{constant('BASE_URL')}}{{homeDetails.sub_logo}}" alt="psp"></a>
-            </div>
+            {% if homeDetails.sub_logo_url is not empty %}
+              <div class="sub-logo">
+                <a href="{{homeDetails.sub_logo_url}}"><img src="{{constant('BASE_URL')}}{{homeDetails.sub_logo}}" alt="sub-logo"></a>
+              </div>
+            {% else %}
+              <div class="sub-logo">
+                <img src="{{constant('BASE_URL')}}{{homeDetails.sub_logo}}" alt="sub-logo">
+              </div>
+            {% endif %}
           {% endif %}
         {% endif %}
       </div>

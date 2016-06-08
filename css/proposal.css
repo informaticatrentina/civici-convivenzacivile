@@ -532,7 +532,7 @@ body .inmovimento .modal .modal-header { background-color: rgb(226,185,14); }
 	background-image: url('../images/logo-partecipa.jpg');
 }
 
-.psp-logo
+.sub-logo
 {
 	position: relative;
 	float: right;
@@ -540,7 +540,7 @@ body .inmovimento .modal .modal-header { background-color: rgb(226,185,14); }
 	padding-bottom: 10px;
 }
 
-.psp-logo img {
+.sub-logo img {
 	max-width: 100%;
 }
 

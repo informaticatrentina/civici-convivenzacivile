@@ -1,13 +1,27 @@
-<div class="container" style="padding : 0px"> 
+<div class="container" style="padding : 0px">
   <div class="row">
     <div class="col-sm-12 col-lg-12" style="position:relative;">
       <div class="border-line">
-        <h1 class="site-title" style="margin:10px 0;">
-          <a class="partecipa-logo" rel="home" title="Io Partecipo" href="{{constant('BASE_URL')}}">Io Partecipo</a>
-        </h1>
-        <div class="psp-logo">
-          <a href="http://www.provincia.trento.it"><img src="{{constant('THEME_URL')}}images/pat.png" alt="psp"></a>
-        </div>
+        {% if homeDetails is not empty %}
+          {% if homeDetails.main_logo is not empty %}
+            <h1 class="site-title">
+              <a class="partecipa-logo" rel="home" title="Io Partecipo" href="{{constant('BASE_URL')}}"><img src="{{constant('BASE_URL')}}{{homeDetails.main_logo}}" alt="Io Partecipo"></a>
+            </h1>
+          {% endif %}
+        {% endif %}
+        {% if homeDetails is not empty %}
+          {% if homeDetails.sub_logo is not empty %}
+            {% if homeDetails.sub_logo_url is not empty %}
+              <div class="sub-logo">
+                <a href="{{homeDetails.sub_logo_url}}"><img src="{{constant('BASE_URL')}}{{homeDetails.sub_logo}}" alt="sub-logo"></a>
+              </div>
+            {% else %}
+              <div class="sub-logo">
+                <img src="{{constant('BASE_URL')}}{{homeDetails.sub_logo}}" alt="sub-logo">
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endif %}
       </div>
     </div>
   </div>
