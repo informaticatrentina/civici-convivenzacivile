@@ -9,6 +9,6 @@ jQuery(document).ready(function() {
     closeLink: 'Chiudi',
     closeMessage: '', // Message below close window link
     display: ['firefox', 'chrome', 'msie'],
-    imagePath: './themes/pianosalute/images/'
+    imagePath: './themes/convivenzacivile/images/'
   });
 });
